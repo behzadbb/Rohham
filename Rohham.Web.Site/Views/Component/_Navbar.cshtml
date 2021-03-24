@@ -1,0 +1,57 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div id="header" class="arduix-nav-style">
+    <div class="navbar-area">
+        <!-- Menu For Mobile Device -->
+        <div class="mobile-nav">
+            <a href="index.html" class="logo">
+                <img src="@Rohham.Web.Site.Models.Component.NavbarVM.Icon" alt="Logo">
+            </a>
+        </div>
+        <!-- Menu For Desktop Device -->
+        <div class="main-nav">
+            <nav class="navbar navbar-expand-md navbar-light">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="@Rohham.Web.Site.Models.Component.NavbarVM.Icon" alt="Logo">
+                    </a>
+                    <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                        <ul class="navbar-nav m-auto">
+                            @foreach (var item in @Rohham.Web.Site.Models.Component.NavbarVM.NavbarItems)
+                            {
+                                <li class="nav-item">
+                                    <a href="@item.Link" class="nav-link dropdown-toggle">
+                                        @item.Name
+                                        <i class='bx bx-chevron-up'></i>
+                                    </a>
+                                    @if (item.Childs != null && item.Childs.Any())
+                                    {
+                                        <ul class="dropdown-menu">
+                                            @foreach (var child1 in item.Childs)
+                                            {
+                                                <li class="nav-item">
+                                                    <a href="@child1.Link" class="nav-link">@child1.Name</a>
+                                                </li>
+                                            }
+                                        </ul>
+                                    }
+                                </li>
+                            }
+                        </ul>
+                        <!-- Start Other Option -->
+                        <div class="others-option">
+                            <a class="default-btn" href="log-in.html">
+                                ورود
+                                <i class="bx bx-log-in-circle"></i>
+                            </a>
+                        </div>
+                        <!-- End Other Option -->
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>

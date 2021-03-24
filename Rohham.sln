@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30309.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rohham.Web.Site", "Rohham.Web.Site\Rohham.Web.Site.csproj", "{851FAC23-5D3D-4D4D-8391-F31FFD5AE162}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rohham.Web.Site", "Rohham.Web.Site\Rohham.Web.Site.csproj", "{851FAC23-5D3D-4D4D-8391-F31FFD5AE162}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rohham.Models", "Rohham.Models\Rohham.Models.csproj", "{D7BFC532-EC4A-448E-89E0-7300A43ABEA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rohham.Entities", "Rohham.Entities\Rohham.Entities.csproj", "{73510AA5-0E62-4DC3-9C25-02E87ACE94AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rohham.Data", "Rohham.Data\Rohham.Data.csproj", "{7197702C-0EE0-4CAD-A934-97995DF14651}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rohham.Services", "Rohham.Services\Rohham.Services.csproj", "{201B616C-0C28-4ABB-A36A-631FE42D4626}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +23,22 @@ Global
 		{851FAC23-5D3D-4D4D-8391-F31FFD5AE162}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{851FAC23-5D3D-4D4D-8391-F31FFD5AE162}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{851FAC23-5D3D-4D4D-8391-F31FFD5AE162}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7BFC532-EC4A-448E-89E0-7300A43ABEA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7BFC532-EC4A-448E-89E0-7300A43ABEA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7BFC532-EC4A-448E-89E0-7300A43ABEA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7BFC532-EC4A-448E-89E0-7300A43ABEA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73510AA5-0E62-4DC3-9C25-02E87ACE94AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73510AA5-0E62-4DC3-9C25-02E87ACE94AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73510AA5-0E62-4DC3-9C25-02E87ACE94AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73510AA5-0E62-4DC3-9C25-02E87ACE94AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7197702C-0EE0-4CAD-A934-97995DF14651}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7197702C-0EE0-4CAD-A934-97995DF14651}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7197702C-0EE0-4CAD-A934-97995DF14651}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7197702C-0EE0-4CAD-A934-97995DF14651}.Release|Any CPU.Build.0 = Release|Any CPU
+		{201B616C-0C28-4ABB-A36A-631FE42D4626}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{201B616C-0C28-4ABB-A36A-631FE42D4626}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{201B616C-0C28-4ABB-A36A-631FE42D4626}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{201B616C-0C28-4ABB-A36A-631FE42D4626}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

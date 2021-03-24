@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -6,7 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Rohham.Data\Rohham.Data.csproj" />
-    <ProjectReference Include="..\Rohham.Services\Rohham.Services.csproj" />
+    <ProjectReference Include="..\Rohham.Entities\Rohham.Entities.csproj" />
   </ItemGroup>
 
 </Project>

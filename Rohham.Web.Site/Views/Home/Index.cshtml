@@ -1,8 +1,972 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "صفحه اصلی";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<!-- Start Preloader Area -->
+<div class="preloader">
+    <div class="lds-ripple">
+        <div></div>
+        <div></div>
+    </div>
 </div>
+<!-- End Preloader Area -->
+<!-- Start Arduix Navbar Area -->
+@await Html.PartialAsync("~/Views/Component/_Navbar.cshtml")
+<!-- End Arduix Navbar Area -->
+<!-- Start Main Banner Area -->
+<section class="main-banner-area main-banner-area-three">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="banner-text">
+                    <h1>راه حل های امن IT را برای یک محیط امن تر امن کنید</h1>
+                    <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
+                    <div class="banner-btn">
+                        <a class="default-btn" href="about-style-one.html">
+                            بیشتر بدانید
+                        </a>
+                        <a class="default-btn active popup-youtube" href="https://www.youtube.com/watch?v=EHpC85KjoH4">
+                            <i class="bx bx-play"></i>
+                            چطور کار میکند؟
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="banner-main-img banner-one-main-img">
+                    <img src="~/img/home-three-banner/banner-three-main-img.png" alt="Image">
+                </div>
+                <div class="banner-img">
+                    <img class="wow fadeInDown" data-wow-delay=".1s" src="~/img/home-three-banner/main-img-part/1.png" alt="Image">
+                    <img class="wow fadeInDown" data-wow-delay=".6s" src="~/img/home-three-banner/main-img-part/2.png" alt="Image">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="whites-shape">
+        <img src="~/img/home-three-banner/white-bottom-shape-banner-three.png" alt="Image">
+    </div>
+    <div class="over-shape">
+        <img src="~/img/home-one-banner/banner-one-shape/1.png" alt="Image">
+        <img src="~/img/home-one-banner/banner-one-shape/1.png" alt="Image">
+        <img src="~/img/home-one-banner/banner-one-shape/2.png" alt="Image">
+        <img src="~/img/home-one-banner/banner-one-shape/2.png" alt="Image">
+        <img src="~/img/home-one-banner/banner-one-shape/3.png" alt="Image">
+    </div>
+</section>
+<!-- End Main Banner Area -->
+<!-- Start Brand Area -->
+<div class="brand-area-two mt-100 ptb-100">
+    <div class="container">
+        <div class="brand-wrap owl-carousel owl-theme">
+            <div class="single-brand">
+                <a href="#">
+                    <img src="~/img/brand/1.png" alt="Image">
+                </a>
+            </div>
+            <div class="single-brand">
+                <a href="#">
+                    <img src="~/img/brand/2.png" alt="Image">
+                </a>
+            </div>
+            <div class="single-brand">
+                <a href="#">
+                    <img src="~/img/brand/3.png" alt="Image">
+                </a>
+            </div>
+            <div class="single-brand">
+                <a href="#">
+                    <img src="~/img/brand/4.png" alt="Image">
+                </a>
+            </div>
+            <div class="single-brand">
+                <a href="#">
+                    <img src="~/img/brand/5.png" alt="Image">
+                </a>
+            </div>
+            <div class="single-brand">
+                <a href="#">
+                    <img src="~/img/brand/6.png" alt="Image">
+                </a>
+            </div>
+            <div class="single-brand">
+                <a href="#">
+                    <img src="~/img/brand/7.png" alt="Image">
+                </a>
+            </div>
+            <div class="single-brand">
+                <a href="#">
+                    <img src="~/img/brand/8.png" alt="Image">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Brand Area -->
+<!-- Start About Area -->
+<section class="about-area pt-100">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="about-img">
+                    <img src="~/img/about-img-three.png" alt="Image">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="about-content">
+                    <span>درباره ما</span>
+                    <h2>ما هر پروژه را با مراقبت و نیاز مشتری تکمیل می کنیم</h2>
+                    <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است. لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-6">
+                            <ul>
+                                <li>
+                                    <i class="flaticon-checked"></i>
+                                    ذخیره پیشرفته
+                                </li>
+                                <li>
+                                    <i class="flaticon-checked"></i>
+                                    برنامه های نامحدود
+                                </li>
+                                <li>
+                                    <i class="flaticon-checked"></i>
+                                    انتقال داده ها
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6 col-sm-6">
+                            <ul>
+                                <li>
+                                    <i class="flaticon-checked"></i>
+                                    انتقال داده به سرور
+                                </li>
+                                <li>
+                                    <i class="flaticon-checked"></i>
+                                    24/7 پشتیبانی رایگان
+                                </li>
+                                <li>
+                                    <i class="flaticon-checked"></i>
+                                    درخواست بهینه شده
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a class="default-btn" href="about-style-two.html">
+                        بیشتر بدانید
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End About Area -->
+<!-- Start Choose Us Area -->
+<section class="choose-ue-area ptb-100">
+    <div class="container">
+        <div class="section-title">
+            <span>چرا ما را انتخاب کنید</span>
+            <h2>بسترهای نرم افزاری ما فرآیند ایجاد وب سایت شما را دور می کند</h2>
+            <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="choose-content">
+                    <ul>
+                        <li>
+                            <span>01 <i class="flaticon-technical-support"></i></span>
+                            <h3>امنیت ایمن</h3>
+                            <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
+                        </li>
+                        <li class="ml">
+                            <span>02 <i class="flaticon-shield"></i></span>
+                            <h3>پشتیبانی فنی</h3>
+                            <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
+                        </li>
+                        <li class="ml-25">
+                            <span>03 <i class="flaticon-support"></i></span>
+                            <h3>پشتیبانی زنده</h3>
+                            <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="choose-content">
+                    <ul>
+                        <li>
+                            <span>01 <i class="flaticon-technical-support"></i></span>
+                            <h3>رایگان و سریع </h3>
+                            <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
+                        </li>
+                        <li class="ml">
+                            <span>02 <i class="flaticon-shield"></i></span>
+                            <h3>فن آوری پیشرفته</h3>
+                            <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
+                        </li>
+                        <li class="ml-25">
+                            <span>03 <i class="flaticon-support"></i></span>
+                            <h3>قیمت های رقابتی</h3>
+                            <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Choose Us Area -->
+<!-- Start What We Offer Area -->
+<section class="offer-area offer-area-two pt-100 pb-70">
+    <div class="container">
+        <div class="section-title">
+            <span>خدمات ما</span>
+            <h2>خدمات حرفه ای ما برای شما</h2>
+            <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است. لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-sm-6">
+                <div class="single-offer">
+                    <i class="flaticon-chip"></i>
+                    <h3>رباتیک و پهپاد</h3>
+                    <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="single-offer">
+                    <i class="flaticon-vr"></i>
+                    <h3>واقعیت مجازی</h3>
+                    <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="single-offer">
+                    <i class="flaticon-blockchain"></i>
+                    <h3>پروژه بلاکچین</h3>
+                    <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="single-offer">
+                    <i class="flaticon-target"></i>
+                    <h3>پردازش تصویر</h3>
+                    <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="single-offer">
+                    <i class="flaticon-choice"></i>
+                    <h3>مدیریت سفارش</h3>
+                    <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="single-offer">
+                    <i class="flaticon-deep-learning"></i>
+                    <h3>فراگیری ماشین</h3>
+                    <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="offer-shape">
+        <img src="~/img/shape/offer-shape/1.png" alt="Image">
+        <img src="~/img/shape/offer-shape/2.png" alt="Image">
+        <img src="~/img/shape/offer-shape/3.png" alt="Image">
+        <img src="~/img/shape/offer-shape/4.png" alt="Image">
+        <img src="~/img/shape/offer-shape/5.png" alt="Image">
+        <img src="~/img/shape/offer-shape/5.png" alt="Image">
+        <img src="~/img/shape/offer-shape/6.png" alt="Image">
+    </div>
+</section>
+<!-- End What We Offer Area -->
+<!-- Start Business Area -->
+<section class="business-area ptb-100">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="business-content">
+                    <h2>تجارت خود را رقابتی تر و با دوام تر کنید</h2>
+                </div>
+                <div class="single-business">
+                    <i class="flaticon-chip"></i>
+                    <h3>هوش مصنوعی امنیت سایبر را بهبود می بخشد</h3>
+                    <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است. لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
+                </div>
+                <div class="single-business">
+                    <i class="flaticon-blockchain"></i>
+                    <h3>جامعه ای با یک مأموریت بی نظیر</h3>
+                    <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است. لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
+                </div>
+                <a class="default-btn" href="about-style-two.html">
+                    دانستن جزئیات
+                </a>
+            </div>
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-lg-6 col-sm-6 counter-nth">
+                        <div class="single-counter">
+                            <h2>
+                                <span style="direction: ltr;" class="odometer" data-count="95">00</span> <span class="target">%</span>
+                            </h2>
+                            <p>پروژه تکمیل</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-6 counter-nth">
+                        <div class="single-counter">
+                            <h2>
+                                <span style="direction: ltr;" class="odometer" data-count="90">00</span> <span class="target">%</span>
+                            </h2>
+                            <p>طراحی</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-6 counter-nth">
+                        <div class="single-counter">
+                            <h2>
+                                <span style="direction: ltr;" class="odometer" data-count="85">00</span> <span class="target">%</span>
+                            </h2>
+                            <p>مشتریان راضی</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-6 counter-nth">
+                        <div class="single-counter">
+                            <h2>
+                                <span style="direction: ltr;" class="odometer" data-count="80">00</span> <span class="target">%</span>
+                            </h2>
+                            <p>برنده جایزه</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Business Area -->
+<!-- Start Industries Area -->
+<section class="industries-area pb-100">
+    <div class="container">
+        <div class="section-title">
+            <span>چیزی که ما پیشنهاد میدیم</span>
+            <h2>صنایعی که ما در خدمت آنها هستیم</h2>
+            <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است. لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد.</p>
+        </div>
+        <div class="tab industries-list-tab">
+            <div class="row align-items-center">
+                <div class="col-lg-3">
+                    <ul class="tabs">
+                        <li>
+                            <a href="#">
+                                <i class="flaticon-machine-learning"></i>
+                                <h3>صنعت سنگین</h3>
+                                <span>صنعت ماشین</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="flaticon-artificial-intelligence"></i>
+                                <h3>حمل و نقل</h3>
+                                <span>صنعت ماشین</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="flaticon-health"></i>
+                                <h3>مراقبت ها</h3>
+                                <span>صنعت ماشین</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="flaticon-automation"></i>
+                                <h3>کارخانه ها</h3>
+                                <span>صنعت ماشین</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-9">
+                    <div class="tab_content">
+                        <div class="tabs_item">
+                            <div class="row  align-items-center">
+                                <div class="col-lg-6">
+                                    <div class="industries-img">
+                                        <img src="~/img/industries-img.png" alt="Image">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="industries-content">
+                                        <h3>هوش مصنوعی در صنعت</h3>
+                                        <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
+                                        <p class="mb">لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
+                                        <div class="row">
+                                            <div class="col-lg-6 col-sm-6">
+                                                <ul class="industries-item">
+                                                    <li>
+                                                        <i class="flaticon-checked"></i>
+                                                        فرصت ها
+                                                    </li>
+                                                    <li>
+                                                        <i class="flaticon-checked"></i>
+                                                        پدید آوردن
+                                                    </li>
+                                                    <li>
+                                                        <i class="flaticon-checked"></i>
+                                                        صنایع
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-lg-6 col-sm-6">
+                                                <ul class="industries-item">
+                                                    <li>
+                                                        <i class="flaticon-checked"></i>
+                                                        امنیت
+                                                    </li>
+                                                    <li>
+                                                        <i class="flaticon-checked"></i>
+                                                        بالاترین
+                                                    </li>
+                                                    <li>
+                                                        <i class="flaticon-checked"></i>
+                                                        اولویت
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <a class="default-btn" href="#">بیشتر پیدا کن</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tabs_item">
+                            <div class="row  align-items-center">
+                                <div class="col-lg-6">
+                                    <div class="industries-content">
+                                        <h3>هوش مصنوعی در صنعت</h3>
+                                        <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است. لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
+                                        <p class="mb">لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
+                                        <div class="row">
+                                            <div class="col-lg-6 col-sm-6">
+                                                <ul class="industries-item">
+                                                    <li>
+                                                        <i class="flaticon-checked"></i>
+                                                        امنیت
+                                                    </li>
+                                                    <li>
+                                                        <i class="flaticon-checked"></i>
+                                                        بالاترین
+                                                    </li>
+                                                    <li>
+                                                        <i class="flaticon-checked"></i>
+                                                        اولویت
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-lg-6 col-sm-6">
+                                                <ul class="industries-item">
+                                                    <li>
+                                                        <i class="flaticon-checked"></i>
+                                                        فرصت ها
+                                                    </li>
+                                                    <li>
+                                                        <i class="flaticon-checked"></i>
+                                                        پدید آوردن
+                                                    </li>
+                                                    <li>
+                                                        <i class="flaticon-checked"></i>
+                                                        صنایع
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <a class="default-btn" href="#">بیشتر پیدا کن</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="industries-img">
+                                        <img src="~/img/industries-img.png" alt="Image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tabs_item">
+                            <div class="row  align-items-center">
+                                <div class="col-lg-6">
+                                    <div class="industries-img">
+                                        <img src="~/img/industries-img.png" alt="Image">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="industries-content">
+                                        <h3>هوش مصنوعی در صنعت</h3>
+                                        <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است. لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
+                                        <p class="mb">لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
+                                        <div class="row">
+                                            <div class="col-lg-6 col-sm-6">
+                                                <ul class="industries-item">
+                                                    <li>
+                                                        <i class="flaticon-checked"></i>
+                                                        پدید آوردن
+                                                    </li>
+                                                    <li>
+                                                        <i class="flaticon-checked"></i>
+                                                        ابداع
+                                                    </li>
+                                                    <li>
+                                                        <i class="flaticon-checked"></i>
+                                                        تعدیل کننده
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-lg-6 col-sm-6">
+                                                <ul class="industries-item">
+                                                    <li>
+                                                        <i class="flaticon-checked"></i>
+                                                        ساختگی
+                                                    </li>
+                                                    <li>
+                                                        <i class="flaticon-checked"></i>
+                                                        صنعت
+                                                    </li>
+                                                    <li>
+                                                        <i class="flaticon-checked"></i>
+                                                        فرصت ها
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <a class="default-btn" href="#">بیشتر پیدا کن</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tabs_item">
+                            <div class="row  align-items-center">
+                                <div class="col-lg-6">
+                                    <div class="industries-content">
+                                        <h3>هوش مصنوعی در صنعت</h3>
+                                        <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است. لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
+                                        <p class="mb">لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
+                                        <div class="row">
+                                            <div class="col-lg-6 col-sm-6">
+                                                <ul class="industries-item">
+                                                    <li>
+                                                        <i class="flaticon-checked"></i>
+                                                        فرصت ها
+                                                    </li>
+                                                    <li>
+                                                        <i class="flaticon-checked"></i>
+                                                        پدید آوردن
+                                                    </li>
+                                                    <li>
+                                                        <i class="flaticon-checked"></i>
+                                                        صنایع
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-lg-6 col-sm-6">
+                                                <ul class="industries-item">
+                                                    <li>
+                                                        <i class="flaticon-checked"></i>
+                                                        امنیت
+                                                    </li>
+                                                    <li>
+                                                        <i class="flaticon-checked"></i>
+                                                        بالاترین
+                                                    </li>
+                                                    <li>
+                                                        <i class="flaticon-checked"></i>
+                                                        اولویت
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <a class="default-btn" href="#">بیشتر پیدا کن</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="industries-img">
+                                        <img src="~/img/industries-img.png" alt="Image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Industries Area -->
+<!-- End Case Area -->
+<section class="case-area pb-100">
+    <div class="container">
+        <div class="section-title">
+            <span>مطالعات موردی</span>
+            <h2>مطالعات موردی اخیر ما</h2>
+        </div>
+        <div class="row">
+            <div class="case-top-wrap owl-carousel owl-theme">
+                <div class="case-wrap">
+                    <div class="single-case">
+                        <img src="~/img/case/1.png" alt="Image">
+                        <a class="link-icon" href="#"><i class="bx bx-plus"></i></a>
+                    </div>
+                    <h3>
+                        <a href="#">
+                            معماری شناختی
+                        </a>
+                    </h3>
+                </div>
+                <div class="case-wrap">
+                    <div class="single-case">
+                        <img src="~/img/case/2.png" alt="Image">
+                        <a class="link-icon" href="#"><i class="bx bx-plus"></i></a>
+                    </div>
+                    <h3>
+                        <a href="#">
+                            تشخیص تصویر
+                        </a>
+                    </h3>
+                </div>
+                <div class="case-wrap">
+                    <div class="single-case">
+                        <img src="~/img/case/3.png" alt="Image">
+                        <a class="link-icon" href="#"><i class="bx bx-plus"></i></a>
+                    </div>
+                    <h3>
+                        <a href="#">
+                            کتابخانه های نرم افزار
+                        </a>
+                    </h3>
+                </div>
+                <div class="case-wrap">
+                    <div class="single-case">
+                        <img src="~/img/case/4.png" alt="Image">
+                        <a class="link-icon" href="#"><i class="bx bx-plus"></i></a>
+                    </div>
+                    <h3>
+                        <a href="#">
+                            کتابخانه های معماری
+                        </a>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Case Area -->
+<!-- Start Client Area -->
+<section class="client-area ptb-100">
+    <div class="container">
+        <div class="section-title">
+            <span>مشتریان ما</span>
+            <h2>آنچه مشتری درباره ما می گوید</h2>
+        </div>
+        <div class="client-wrap owl-carousel owl-theme">
+            <div class="single-client">
+                <i class="quotes flaticon-left-quotes-sign"></i>
+                <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
+                <ul>
+                    <li>
+                        <i class="bx bxs-star"></i>
+                    </li>
+                    <li>
+                        <i class="bx bxs-star"></i>
+                    </li>
+                    <li>
+                        <i class="bx bxs-star"></i>
+                    </li>
+                    <li>
+                        <i class="bx bxs-star"></i>
+                    </li>
+                    <li>
+                        <i class="bx bxs-star"></i>
+                    </li>
+                </ul>
+                <div class="client-img">
+                    <img src="~/img/client/1.jpg" alt="Image">
+                    <h3>آلن میر</h3>
+                    <span>توسعه دهنده</span>
+                </div>
+            </div>
+            <div class="single-client">
+                <i class="quotes flaticon-left-quotes-sign"></i>
+                <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
+                <ul>
+                    <li>
+                        <i class="bx bxs-star"></i>
+                    </li>
+                    <li>
+                        <i class="bx bxs-star"></i>
+                    </li>
+                    <li>
+                        <i class="bx bxs-star"></i>
+                    </li>
+                    <li>
+                        <i class="bx bxs-star"></i>
+                    </li>
+                    <li>
+                        <i class="bx bxs-star"></i>
+                    </li>
+                </ul>
+                <div class="client-img">
+                    <img src="~/img/client/2.jpg" alt="Image">
+                    <h3>آلن میر</h3>
+                    <span>توسعه دهنده</span>
+                </div>
+            </div>
+            <div class="single-client">
+                <i class="quotes flaticon-left-quotes-sign"></i>
+                <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
+                <ul>
+                    <li>
+                        <i class="bx bxs-star"></i>
+                    </li>
+                    <li>
+                        <i class="bx bxs-star"></i>
+                    </li>
+                    <li>
+                        <i class="bx bxs-star"></i>
+                    </li>
+                    <li>
+                        <i class="bx bxs-star"></i>
+                    </li>
+                    <li>
+                        <i class="bx bxs-star"></i>
+                    </li>
+                </ul>
+                <div class="client-img">
+                    <img src="~/img/client/3.jpg" alt="Image">
+                    <h3>آلن میر</h3>
+                    <span>توسعه دهنده</span>
+                </div>
+            </div>
+            <div class="single-client">
+                <i class="quotes flaticon-left-quotes-sign"></i>
+                <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
+                <ul>
+                    <li>
+                        <i class="bx bxs-star"></i>
+                    </li>
+                    <li>
+                        <i class="bx bxs-star"></i>
+                    </li>
+                    <li>
+                        <i class="bx bxs-star"></i>
+                    </li>
+                    <li>
+                        <i class="bx bxs-star"></i>
+                    </li>
+                    <li>
+                        <i class="bx bxs-star"></i>
+                    </li>
+                </ul>
+                <div class="client-img">
+                    <img src="~/img/client/4.jpg" alt="Image">
+                    <h3>آلن میر</h3>
+                    <span>توسعه دهنده</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Client Area -->
+<!-- Start FAQ Area -->
+<section class="faq-area ptb-100">
+    <div class="container">
+        <div class="section-title">
+            <span>سوالات متداول</span>
+            <h2>مهمترین سوالات متداول کاربران</h2>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <div class="faq-accordion">
+                    <ul class="accordion">
+                        <li class="accordion-item">
+                            <a class="accordion-title active" href="javascript:void(0)">
+                                <i class='bx bx-chevron-down'></i>
+                                سوالات متداول 1؟
+                            </a>
+
+                            <div class="accordion-content show">
+                                <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است. لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
+                            </div>
+                        </li>
+
+                        <li class="accordion-item">
+                            <a class="accordion-title" href="javascript:void(0)">
+                                <i class='bx bx-chevron-down'></i>
+                                سوالات متداول 2؟
+                            </a>
+
+                            <div class="accordion-content">
+                                <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است. لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
+                            </div>
+                        </li>
+
+                        <li class="accordion-item">
+                            <a class="accordion-title" href="javascript:void(0)">
+                                <i class='bx bx-chevron-down'></i>
+                                سوالات متداول 3؟
+                            </a>
+
+                            <div class="accordion-content">
+                                <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است. لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
+                            </div>
+                        </li>
+
+                        <li class="accordion-item">
+                            <a class="accordion-title" href="javascript:void(0)">
+                                <i class='bx bx-chevron-down'></i>
+                                سوالات متداول 4؟
+                            </a>
+
+                            <div class="accordion-content">
+                                <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است. لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
+                            </div>
+                        </li>
+
+                        <li class="accordion-item">
+                            <a class="accordion-title" href="javascript:void(0)">
+                                <i class='bx bx-chevron-down'></i>
+                                سوالات متداول 5؟
+                            </a>
+
+                            <div class="accordion-content">
+                                <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است. لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="faq-img">
+                    <img src="~/img/faq-img.png" alt="Image">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End FAQ Area -->
+<!-- Strat News Area -->
+<section class="news-area pb-70">
+    <div class="container">
+        <div class="section-title">
+            <span>اخبار وبلاگ</span>
+            <h2>اخبار وبلاگ ما را دنبال کنید </h2>
+            <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است. لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد.</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="single-news">
+                    <div class="blog-img">
+                        <a href="news-details.html">
+                            <img src="~/img/blog/1.png" alt="Image">
+                        </a>
+                        <div class="dates">
+                            <span>20 دی</span>
+                        </div>
+                    </div>
+                    <div class="news-content-wrap">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <i class="flaticon-user"></i>
+                                    مدیر
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="flaticon-conversation"></i>
+                                    نظر
+                                </a>
+                            </li>
+                        </ul>
+                        <a href="news-details.html">
+                            <h3>آیا یادگیری ماشین برای شما مناسب است</h3>
+                        </a>
+                        <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
+                        <a class="read-more" href="news-details.html">
+                            ادامه خواندن
+                            <i class="bx bx-plus"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single-news">
+                    <div class="blog-img">
+                        <a href="news-details.html">
+                            <img src="~/img/blog/2.png" alt="Image">
+                        </a>
+                        <div class="dates">
+                            <span>20 دی</span>
+                        </div>
+                    </div>
+                    <div class="news-content-wrap">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <i class="flaticon-user"></i>
+                                    مدیر
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="flaticon-conversation"></i>
+                                    نظر
+                                </a>
+                            </li>
+                        </ul>
+                        <a href="news-details.html">
+                            <h3>آیا یادگیری ماشین برای شما مناسب است</h3>
+                        </a>
+                        <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
+                        <a class="read-more" href="news-details.html">
+                            ادامه خواندن
+                            <i class="bx bx-plus"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0">
+                <div class="single-news">
+                    <div class="blog-img">
+                        <a href="news-details.html">
+                            <img src="~/img/blog/3.png" alt="Image">
+                        </a>
+                        <div class="dates">
+                            <span>20 دی</span>
+                        </div>
+                    </div>
+                    <div class="news-content-wrap">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <i class="flaticon-user"></i>
+                                    مدیر
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="flaticon-conversation"></i>
+                                    نظر
+                                </a>
+                            </li>
+                        </ul>
+                        <a href="news-details.html">
+                            <h3>آیا یادگیری ماشین برای شما مناسب است</h3>
+                        </a>
+                        <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
+                        <a class="read-more" href="news-details.html">
+                            ادامه خواندن
+                            <i class="bx bx-plus"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End News Area -->
+@await Html.PartialAsync("~/Views/Component/_Footer.cshtml")

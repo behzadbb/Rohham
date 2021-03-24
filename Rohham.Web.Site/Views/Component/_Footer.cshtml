@@ -1,0 +1,137 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!-- Start Footer Top Area -->
+<footer class="footer-top-area pt-100 pb-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="single-widget">
+                    <a href="index.html">
+                        <img src="@Rohham.Web.Site.Models.Component.FooterVM.FooterIconUrl" alt="Image">
+                    </a>
+                    <p>@Rohham.Web.Site.Models.Component.FooterVM.ShortDescription</p>
+                    <ul class="social-icon">
+                        <li>
+                            <a href="@Rohham.Web.Site.Models.Component.FooterVM.FB">
+                                <i class="bx bxl-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="bx bxl-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="bx bxl-pinterest-alt"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="bx bxl-linkedin"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="bx bxl-youtube"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            @foreach (var item in Rohham.Web.Site.Models.Component.FooterVM.FooterColumns)
+            {
+                <div class="col-lg-3 col-md-6">
+                    <div class="single-widget">
+                        <h3>@item.Title</h3>
+                        <ul>
+                            @foreach (var link in item.Link)
+                            {
+                                <li>
+                                    <a href="@link.Value">
+                                        <i class="right-icon bx bx-chevrons-left"></i>
+                                        @link.Key
+                                    </a>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            }
+            <div class="col-lg-3 col-md-6">
+                <div class="single-widget">
+                    <h3>اطلاعات تماس</h3>
+                    <ul class="information">
+
+                        @foreach (var tel in Rohham.Web.Site.Models.Component.FooterVM.Tel)
+                        {
+                            <li class="address">
+                                <i class="flaticon-call"></i>
+                                <span>تلفن</span>
+                                <a href="tel:@tel">
+                                </a>
+                            </li>
+                        }
+
+                        <li class="address">
+                            <i class="flaticon-envelope"></i>
+                            <span>ایمیل</span>
+                            <a href="@Rohham.Web.Site.Models.Component.FooterVM.Email">
+                                @Rohham.Web.Site.Models.Component.FooterVM.Email
+                            </a>
+                        </li>
+                        <li class="address">
+                            <i class="flaticon-maps-and-flags"></i>
+                            <span>آدرس</span>
+                            @Rohham.Web.Site.Models.Component.FooterVM.Address
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-shape">
+        <img src="~/img/shape/footer-shape-one.png" alt="Image">
+        <img src="~/img/shape/footer-shape-two.png" alt="Image">
+    </div>
+</footer>
+<!-- End Footer Top Area -->
+<!-- Start Footer Bottom Area -->
+<footer class="footer-bottom-area">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-4">
+                <div class="copy-right">
+                    <p>کپی رایت .<i class="bx bx-copyright"></i> 1400 <a href="~">رهام</a>. تمام حقوق قالب محفوظ است.</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="privacy">
+                    <ul>
+                        <li>
+                            <a href="@Rohham.Web.Site.Models.Component.FooterVM.TermsConditions">شرایط و ضوابط</a>
+                        </li>
+                        <li>
+                            <a href="@Rohham.Web.Site.Models.Component.FooterVM.PrivacyPolicy">حریم خصوصی</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="designed">
+                    <p>طراحی و توسعه توسط <i class='bx bx-heart'></i> <a href="https://www.rohham.com">Rohham</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Footer Bottom Area -->
+<!-- Start Go Top Area -->
+<div class="go-top">
+    <i class="bx bx-chevrons-up"></i>
+    <i class="bx bx-chevrons-up bx-fade-up"></i>
+</div>
+<!-- End Go Top Area -->
