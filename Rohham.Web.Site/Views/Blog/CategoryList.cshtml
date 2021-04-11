@@ -1,0 +1,19 @@
+﻿@model IEnumerable<Rohham.Entities.Blogs.Category>
+    <div class="page-title-area">
+        <div class="container">
+            <div class="page-title-content">
+                <h2>اخبار شبکه ای</h2>
+                <ul>
+                    <li>
+                        <a href="~">
+                            صفحه اصلی
+                        </a>
+                    </li>
+                    @foreach (var item in Model)
+                    {
+                        <li><a href="/Blog/Cat/@item.Name">@item.Title</a></li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>

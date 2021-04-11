@@ -1,0 +1,3 @@
+﻿@model IEnumerable<Rohham.Entities.Blogs.Category>
+
+<section class="widget widget_categories"><h3 class="widget-title">دسته بندی ها</h3><div class="post-wrap"><ul>@foreach (var cat in Model){<li><a href="~/blog/Cat/@cat.Name">@cat.Title</a></li>}</ul></div></section>

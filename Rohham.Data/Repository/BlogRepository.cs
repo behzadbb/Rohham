@@ -5,6 +5,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using System.Data.Sql;
+
+
 
 namespace Rohham.Data.Repository
 {
@@ -42,12 +46,12 @@ namespace Rohham.Data.Repository
 
         public Article GetArticle(int articleId)
         {
-            return Db.Articles.Find(articleId);
+            return Db.Articles.Where(x=>x.Id==articleId).Include("User").FirstOrDefault();
         }
 
         public IList<Article> GetArticles()
         {
-            return Db.Articles.ToList();
+            return Db.Articles.Include("User").ToList();
         }
 
         public IList<Category> GetCategories()

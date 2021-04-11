@@ -1,0 +1,137 @@
+﻿@{
+    ViewData["Title"] = "تماس با ما";
+    ViewData["Description"] = "توضیحات";
+    ViewData["KeyWords"] = "تگ";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+<!-- Start Page Title Area -->
+<div class="page-title-area">
+    <div class="container">
+        <div class="page-title-content">
+            <h2>تماس با ما</h2>
+            <ul>
+                <li>
+                    <a href="/">
+                        صفحه اصلی
+                    </a>
+                </li>
+                <li>تماس</li>
+                <li>تماس با ما</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- End Page Title Area -->
+<!-- Start Contact Info Area -->
+<section class="contact-info-area pt-100 pb-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-lg-6 col-sm-6 col-md-6">
+                        <div class="single-contact-info">
+                            <i class="bx bx-envelope"></i>
+                            <h3>ایمیل ما:</h3>
+                            <a href="mailto:hello@arduix.com">hello@arduix.com</a>
+                            <a href="mailto:info@arduix.com">info@arduix.com</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-6 col-md-6">
+                        <div class="single-contact-info">
+                            <i class="bx bx-phone-call"></i>
+                            <h3>تماس با ما:</h3>
+                            <a href="tel:021-12345678">تلفن. 021-12345678</a>
+                            <a href="tel:021-87654321">تلفن. 021-87654321</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-6 col-md-6">
+                        <div class="single-contact-info">
+                            <i class="bx bx-location-plus"></i>
+                            <h3>ایران</h3>
+                            <a href="#"> ایران ، استان تهران ، دارآباد</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-6 col-md-6">
+                        <div class="single-contact-info">
+                            <i class="bx bx-support"></i>
+                            <h3>چت زنده</h3>
+                            <a href="#">گفتگوی زنده تمام وقت با شرکت ما 24/7</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+
+                <div class="map-area map-area-hight">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d402589.81585837575!2d144.77295794697434!3d-37.97169289154851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad646b5d2ba4df7%3A0x4045675218ccd90!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sbd!4v1610548996920!5m2!1sen!2sbd"></iframe>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Start Contact Area -->
+<section class="main-contact-area pb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="contact-wrap contact-pages mb-0">
+                    <div class="contact-form">
+                        <div class="section-title">
+                            <h2>برای هر سوالی پیام ارسال کنید</h2>
+                        </div>
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-lg-6 col-sm-6">
+                                    <div class="form-group">
+                                        <input type="text" name="name" id="name" class="form-control" required data-error="نام خود را وارد کنید" placeholder="نام شما">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-sm-6">
+                                    <div class="form-group">
+                                        <input type="email" name="email" id="email" class="form-control" required data-error="ایمیل خود را وارد کنید" placeholder="ایمیل شما">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-sm-6">
+                                    <div class="form-group">
+                                        <input type="text" name="phone_number" id="phone_number" required data-error="شماره تلفن خود را وارد کنید" class="form-control" placeholder="تلفن شما">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-sm-6">
+                                    <div class="form-group">
+                                        <input type="text" name="msg_subject" id="msg_subject" class="form-control" required data-error="موضوع خود را وارد کنید" placeholder="موضوع شما">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="form-group">
+                                        <textarea name="message" class="form-control textarea-hight" id="message" cols="30" rows="5" required data-error="پیام خود را بنویسید" placeholder="پیام شما"></textarea>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12 col-md-12">
+                                    <button type="submit" class="default-btn btn-two">
+                                        ارسال پیام
+                                    </button>
+                                    <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Contact Area -->

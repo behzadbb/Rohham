@@ -1,14 +1,16 @@
 ﻿<!doctype html>
-<html lang="fa" dir="rtl">
+<html lang="fa-IR" dir="rtl">
 
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <title>@ViewData["Title"] - فرهیختگان هوشمند رهام</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="keywords" content="@ViewData["KeyWords"]">
     <meta name="description" content="@ViewData["Description"]">
-    <meta name="author" content="Rohham">
+    <meta name="author" content="Behzad Bagheri Behrouz">
+
     <link rel="stylesheet" href="~/css/bootstrap.rtl.min.css">
     <link rel="stylesheet" href="~/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="~/css/owl.carousel.min.css">
@@ -25,6 +27,7 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="~/img/favicon.png">
+
 </head>
 
 <body>
@@ -39,36 +42,10 @@
     <!-- Start Arduix Navbar Area -->
     @await Html.PartialAsync("~/Views/Component/_Navbar.cshtml")
     <!-- End Arduix Navbar Area -->
-    <!-- Start Page Title Area -->
-    <div class="page-title-area">
-        <div class="container">
-            <div class="page-title-content">
-                <h2>اخبار شبکه ای</h2>
-                <ul>
-                    <li>
-                        <a href="index.html">
-                            صفحه اصلی
-                        </a>
-                    </li>
-                    <li>صفحات</li>
-                    <li>اخبار شبکه ای</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- End Page Title Area -->
-    <!-- Strat News Area -->
-    <section class="news-area ptb-100">
-        <div class="container">
-            <div class="section-title">
-                <span>اخبار وبلاگ</span>
-                <h2>اخبار وبلاگ ما را دنبال کنید </h2>
-                <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است. لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد.</p>
-            </div>
-            @RenderBody()
-        </div>
-    </section>
-    <!-- End News Area -->
+    
+    @RenderBody()
+    
+    <!-- Start Footer Top Area -->
 
     @await Html.PartialAsync("~/Views/Component/_Footer.cshtml")
     <!-- End Go Top Area -->

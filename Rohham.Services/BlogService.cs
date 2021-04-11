@@ -39,7 +39,7 @@ namespace Rohham.Services
 
         public Article GetArticle(int articleId)
         {
-            throw new NotImplementedException();
+            return _repo.GetArticle(articleId);
         }
 
         public IList<Article> GetArticles()
@@ -49,7 +49,7 @@ namespace Rohham.Services
 
         public IList<Category> GetCategories()
         {
-            throw new NotImplementedException();
+            return _repo.GetCategories();
         }
 
         public Category GetCategory(int catId)

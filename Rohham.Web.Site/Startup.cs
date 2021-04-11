@@ -13,6 +13,7 @@ using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json;
 using Rohham.Data.Context;
 using Rohham.Data.Repository;
+using Rohham.Services;
 using Rohham.Web.Site.Models.Component;
 
 namespace Rohham.Web.Site
@@ -31,6 +32,7 @@ namespace Rohham.Web.Site
         {
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IBlogRepository, BlogRepository>();
+            services.AddScoped<IBlogService, BlogService>();
 
             services.AddDbContext<ApplicationDbContext>(options =>
             {
@@ -52,26 +54,28 @@ namespace Rohham.Web.Site
         {
             #region Navbar
             List<NavbarItemVM> navbarItems = new List<NavbarItemVM>();
-            NavbarItemVM navbarItem_HomePage = new NavbarItemVM { Id = 1, Active = true, Name = "صفحه اصلی", Link = "#" };
+            NavbarItemVM navbarItem_HomePage = new NavbarItemVM { Id = 1, Active = true, Name = "صفحه اصلی", Link = "/" };
             List<NavbarItemVM> navbarItems1 = new List<NavbarItemVM>();
 
-            NavbarItemVM navbarItem_AboutPage = new NavbarItemVM { Id = 10, Active = true, Name = "درباره ما", Link = "#" };
+            NavbarItemVM navbarItem_AboutPage = new NavbarItemVM { Id = 10, Active = true, Name = "درباره ما", Link = "About" };
             List<NavbarItemVM> navbarItems2 = new List<NavbarItemVM>();
 
-            navbarItems1.Add(new NavbarItemVM { Id = 2, Active = true, Name = "صفحه اصلی1", Link = "#", ParentId = 1 });
-            navbarItems1.Add(new NavbarItemVM { Id = 3, Active = true, Name = "صفحه اصلی2", Link = "#", ParentId = 1 });
-            navbarItems1.Add(new NavbarItemVM { Id = 4, Active = true, Name = "3صفحه اصلی", Link = "#", ParentId = 1 });
-            navbarItems1.Add(new NavbarItemVM { Id = 5, Active = true, Name = "4صفحه اصلی", Link = "#", ParentId = 1 });
-            navbarItem_HomePage.Childs = navbarItems1;
+            NavbarItemVM navbarItem_ContactPage = new NavbarItemVM { Id = 20, Active = true, Name = "تماس", Link = "Contact" };
+            List<NavbarItemVM> navbarItems3 = new List<NavbarItemVM>();
 
-            navbarItems2.Add(new NavbarItemVM { Id = 11, Active = true, Name = "درباره ما 1", Link = "#", ParentId = 10 });
-            navbarItems2.Add(new NavbarItemVM { Id = 12, Active = true, Name = "درباره ما 2", Link = "#", ParentId = 10 });
-            navbarItems2.Add(new NavbarItemVM { Id = 13, Active = true, Name = "درباره ما 3", Link = "#", ParentId = 10 });
-            navbarItems2.Add(new NavbarItemVM { Id = 14, Active = true, Name = "درباره ما 4", Link = "#", ParentId = 10 });
+            //navbarItems1.Add(new NavbarItemVM { Id = 2, Active = true, Name = "صفحه اصلی1", Link = "#", ParentId = 1 });
+            //navbarItems1.Add(new NavbarItemVM { Id = 3, Active = true, Name = "صفحه اصلی2", Link = "#", ParentId = 1 });
+            //navbarItems1.Add(new NavbarItemVM { Id = 4, Active = true, Name = "3صفحه اصلی", Link = "#", ParentId = 1 });
+            //navbarItems1.Add(new NavbarItemVM { Id = 5, Active = true, Name = "4صفحه اصلی", Link = "#", ParentId = 1 });
+            //navbarItem_HomePage.Childs = navbarItems1;
+
+            navbarItems2.Add(new NavbarItemVM { Id = 11, Active = true, Name = "درباره ما", Link = "About", ParentId = 10 });
+            navbarItems2.Add(new NavbarItemVM { Id = 12, Active = true, Name = "تیم ما", Link = "Team", ParentId = 10 });
             navbarItem_AboutPage.Childs = navbarItems2;
 
             navbarItems.Add(navbarItem_HomePage);
             navbarItems.Add(navbarItem_AboutPage);
+            navbarItems.Add(navbarItem_ContactPage);
 
             NavbarVM.NavbarItems = navbarItems;
             NavbarVM.Icon = "/img/white-logo.png";
@@ -133,6 +137,9 @@ namespace Rohham.Web.Site
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+            
+            InitializeDb(app);
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
@@ -146,6 +153,20 @@ namespace Rohham.Web.Site
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            
+        }
+
+        private static void InitializeDb(IApplicationBuilder app)
+        {
+            var scopeFactory = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>();
+            using (var scope = scopeFactory.CreateScope())
+            {
+                using (var context = scope.ServiceProvider.GetService<ApplicationDbContext>())
+                {
+                    context.Database.Migrate();
+                }
+            }
         }
     }
 }

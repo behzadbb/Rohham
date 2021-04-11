@@ -1,0 +1,191 @@
+﻿@model Rohham.Entities.Blogs.Article
+
+@{
+    ViewData["Title"] = Model.Title;
+    ViewData["Description"] = Model.Description;
+    ViewData["KeyWords"] = Model.Tags;
+    Layout = "~/Views/Shared/_LayoutBlogArticle.cshtml";
+}
+
+<div class="blog-details-desc">
+    <div class="article-image">
+        <img src="@Model.ImageUrl" alt="@Model.Title">
+    </div>
+
+    <div class="article-content">
+        <div class="entry-meta">
+            <ul>
+                <li><span>ارسال شده:</span> <a href="#">@Model.RegisterDate</a></li>
+                <li><span>توسط:</span> <a href="#">@Model.User.Username</a></li>
+            </ul>
+        </div>
+
+        <h3>@Model.Title</h3>
+        
+        @Html.Raw(Model.Text)
+        
+    </div>
+
+    <div class="article-footer">
+        <div class="article-tags">
+            <span><i class='bx bx-share-alt'></i></span>
+
+            <a href="#">اشتراک گذاری</a>
+        </div>
+
+        <div class="article-share">
+            <ul class="social">
+                <li>
+                    <a href="#" target="_blank">
+                        <i class='bx bxl-facebook'></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <i class='bx bxl-twitter'></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <i class='bx bxl-linkedin'></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <i class='bx bxl-pinterest-alt'></i>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="post-navigation">
+        <div class="navigation-links">
+            <div class="nav-previous">
+                <a href="#"><i class='bx bx-right-arrow-alt'></i> پست قبلی</a>
+            </div>
+
+            <div class="nav-next">
+                <a href="#">پست بعدی <i class='bx bx-left-arrow-alt'></i></a>
+            </div>
+        </div>
+    </div>
+
+    @*<div class="comments-area">
+        <h3 class="comments-title">2 نظر:</h3>
+
+        <ol class="comment-list">
+            <li class="comment">
+                <div class="comment-body">
+                    <footer class="comment-meta">
+                        <div class="comment-author vcard">
+                            <img src="assets/img/blog-details/comment-img-1.jpg" class="avatar" alt="image">
+                            <b class="fn">جان جونز</b>
+                            <span class="says">می گوید:</span>
+                        </div>
+
+                        <div class="comment-metadata">
+                            <a href="#">
+                                <span>24 دی 1398 در ساعت 10:59 صبح</span>
+                            </a>
+                        </div>
+                    </footer>
+
+                    <div class="comment-content">
+                        <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است. لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
+                    </div>
+
+                    <div class="reply">
+                        <a href="#" class="comment-reply-link">پاسخ دادن</a>
+                    </div>
+                </div>
+
+                <ol class="children">
+                    <li class="comment">
+                        <div class="comment-body">
+                            <footer class="comment-meta">
+                                <div class="comment-author vcard">
+                                    <img src="assets/img/blog-details/comment-img-2.jpg" class="avatar" alt="image">
+                                    <b class="fn">جان جونز</b>
+                                    <span class="says">می گوید:</span>
+                                </div>
+
+                                <div class="comment-metadata">
+                                    <a href="#">
+                                        <span>24 دی 1398 در ساعت 10:59 صبح</span>
+                                    </a>
+                                </div>
+                            </footer>
+
+                            <div class="comment-content">
+                                <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است. لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
+                            </div>
+
+                            <div class="reply">
+                                <a href="#" class="comment-reply-link">پاسخ دادن</a>
+                            </div>
+                        </div>
+                    </li>
+                </ol>
+            </li>
+
+            <li class="comment">
+                <div class="comment-body">
+                    <footer class="comment-meta">
+                        <div class="comment-author vcard">
+                            <img src="assets/img/blog-details/comment-img-3.jpg" class="avatar" alt="image">
+                            <b class="fn">جان جونز</b>
+                            <span class="says">می گوید:</span>
+                        </div>
+
+                        <div class="comment-metadata">
+                            <a href="#">
+                                <span>24 دی 1398 در ساعت 10:59 صبح</span>
+                            </a>
+                        </div>
+                    </footer>
+
+                    <div class="comment-content">
+                        <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است. لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
+                    </div>
+
+                    <div class="reply">
+                        <a href="#" class="comment-reply-link">پاسخ دادن</a>
+                    </div>
+                </div>
+            </li>
+        </ol>
+
+        <div class="comment-respond">
+            <h3 class="comment-reply-title">نظر بدهید</h3>
+
+            <form class="comment-form">
+                <p class="comment-notes">
+                    <span id="email-notes">آدرس ایمیل شما منتشر نخواهد شد.</span>
+                    قسمت های مورد نیاز علامت گذاری شده اند
+                    <span class="required">*</span>
+                </p>
+                <p class="comment-form-author">
+                    <label>نام <span class="required">*</span></label>
+                    <input type="text" id="author" name="author" required="required">
+                </p>
+                <p class="comment-form-email">
+                    <label>ایمیل <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required="required">
+                </p>
+                <p class="comment-form-url">
+                    <label>وبسایت</label>
+                    <input type="url" id="url" name="url">
+                </p>
+                <p class="comment-form-comment">
+                    <label>نظر شما</label>
+                    <textarea name="comment" id="comment" cols="45" rows="5" maxlength="65525" required="required"></textarea>
+                </p>
+                <p class="form-submit">
+                    <input type="submit" name="submit" id="submit" class="submit" value="ارسال نظر">
+                </p>
+            </form>
+        </div>
+    </div>*@
+</div>
