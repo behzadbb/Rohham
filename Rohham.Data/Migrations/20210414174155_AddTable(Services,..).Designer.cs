@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Rohham.Data.Context;
 
 namespace Rohham.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210414174155_AddTable(Services,..)")]
+    partial class AddTableServices
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -106,18 +108,14 @@ namespace Rohham.Data.Migrations
 
                     b.Property<string>("ImageUrl");
 
-                    b.Property<DateTime>("ModifyDate");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
+                    b.Property<int>("Name")
                         .HasMaxLength(100);
 
                     b.Property<int>("Priority");
 
                     b.Property<string>("Text");
 
-                    b.Property<string>("Title")
-                        .IsRequired()
+                    b.Property<int>("Title")
                         .HasMaxLength(100);
 
                     b.HasKey("ServiceId");
@@ -130,10 +128,6 @@ namespace Rohham.Data.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<DateTime>("CreateDate");
-
-                    b.Property<DateTime>("ModifyDate");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -162,11 +156,8 @@ namespace Rohham.Data.Migrations
 
                     b.Property<DateTime>("CreateDate");
 
-                    b.Property<string>("FileName")
-                        .IsRequired()
+                    b.Property<int>("FileName")
                         .HasMaxLength(200);
-
-                    b.Property<DateTime>("ModifyDate");
 
                     b.Property<int>("Priority");
 

@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Rohham.Data.Context;
 
 namespace Rohham.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210414173750_AddTable_And_Change")]
+    partial class AddTable_And_Change
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -90,99 +92,6 @@ namespace Rohham.Data.Migrations
                     b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("Rohham.Entities.Services.Service", b =>
-                {
-                    b.Property<int>("ServiceId")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<DateTime>("CreateDate");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasMaxLength(300);
-
-                    b.Property<string>("Icon");
-
-                    b.Property<string>("ImageUrl");
-
-                    b.Property<DateTime>("ModifyDate");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(100);
-
-                    b.Property<int>("Priority");
-
-                    b.Property<string>("Text");
-
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasMaxLength(100);
-
-                    b.HasKey("ServiceId");
-
-                    b.ToTable("Services");
-                });
-
-            modelBuilder.Entity("Rohham.Entities.Services.ServiceFeature", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<DateTime>("CreateDate");
-
-                    b.Property<DateTime>("ModifyDate");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(100);
-
-                    b.Property<int>("Priority");
-
-                    b.Property<int>("ServiceId");
-
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasMaxLength(100);
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ServiceId");
-
-                    b.ToTable("ServiceFeatures");
-                });
-
-            modelBuilder.Entity("Rohham.Entities.Services.ServiceFile", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<DateTime>("CreateDate");
-
-                    b.Property<string>("FileName")
-                        .IsRequired()
-                        .HasMaxLength(200);
-
-                    b.Property<DateTime>("ModifyDate");
-
-                    b.Property<int>("Priority");
-
-                    b.Property<int>("ServiceId");
-
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasMaxLength(100);
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ServiceId");
-
-                    b.ToTable("ServiceFiles");
-                });
-
             modelBuilder.Entity("Rohham.Entities.User", b =>
                 {
                     b.Property<int>("UserId")
@@ -251,22 +160,6 @@ namespace Rohham.Data.Migrations
                     b.HasOne("Rohham.Entities.Blogs.Category", "Parent")
                         .WithMany()
                         .HasForeignKey("ParentId");
-                });
-
-            modelBuilder.Entity("Rohham.Entities.Services.ServiceFeature", b =>
-                {
-                    b.HasOne("Rohham.Entities.Services.Service", "Service")
-                        .WithMany("FeatureServices")
-                        .HasForeignKey("ServiceId")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("Rohham.Entities.Services.ServiceFile", b =>
-                {
-                    b.HasOne("Rohham.Entities.Services.Service", "Service")
-                        .WithMany("ServiceFiles")
-                        .HasForeignKey("ServiceId")
-                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }

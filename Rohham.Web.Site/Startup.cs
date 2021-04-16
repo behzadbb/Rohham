@@ -1,16 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Newtonsoft.Json;
 using Rohham.Data.Context;
 using Rohham.Data.Repository;
 using Rohham.Services;
@@ -32,7 +28,9 @@ namespace Rohham.Web.Site
         {
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IBlogRepository, BlogRepository>();
+            services.AddScoped<IServiceRepository, ServiceRepository>();
             services.AddScoped<IBlogService, BlogService>();
+            services.AddScoped<IServiceService, ServiceService>();
 
             services.AddDbContext<ApplicationDbContext>(options =>
             {
@@ -78,7 +76,7 @@ namespace Rohham.Web.Site
             navbarItems.Add(navbarItem_ContactPage);
 
             NavbarVM.NavbarItems = navbarItems;
-            NavbarVM.Icon = "/img/white-logo.png";
+            NavbarVM.Icon = "/img/rohham_logo.png";
             #endregion
 
             #region Footer
@@ -119,7 +117,7 @@ namespace Rohham.Web.Site
             FooterVM.PN = "#";
             FooterVM.TW = "#";
             FooterVM.Youtube = "#";
-            FooterVM.FooterIconUrl = "/img/white-logo.png";
+            FooterVM.FooterIconUrl = "/img/Rohham_logo.png";
             FooterVM.PrivacyPolicy = "#";
             FooterVM.Tel = new List<string>();
             FooterVM.Tel.Add("021-66643284");

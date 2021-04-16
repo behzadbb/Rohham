@@ -30,8 +30,8 @@ namespace Rohham.Web.Site.Controllers
             return View(model);
         }
 
-        [Route("article/{id}/{title?}")]
-        public IActionResult Article(int id, string title)
+        [Route("a/{id}")]
+        public IActionResult Article(int id, string name)
         {
             var article = _blogService.GetArticle(id);
             if (article == null)
