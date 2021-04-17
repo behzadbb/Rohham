@@ -46,7 +46,15 @@ namespace Rohham.Data.Repository
 
         public Article GetArticle(int articleId)
         {
-            return Db.Articles.Where(x=>x.Id==articleId).Include("User").FirstOrDefault();
+            return Db.Articles.Where(x => x.Id == articleId).Include("User").FirstOrDefault();
+        }
+
+        public IList<Article> GetArticlesByCatName(string catName)
+        {
+            return Db.Articles.Where(x => x.Category.Name.ToLower() == catName.ToLower()).Include("User").Include("Category").ToList();
+            //return Db.Articles
+            //    .FromSql($"SELECT * FROM dbo.Articles where catid in (select CatId from dbo.Categories where Name=N'{0}')", catName).ToList();
+            //throw new NotImplementedException();
         }
 
         public IList<Article> GetArticles()
@@ -62,6 +70,11 @@ namespace Rohham.Data.Repository
         public Category GetCategory(int catId)
         {
             return Db.Categories.Find(catId);
+        }
+
+        public Category GetCategoryByName(string name)
+        {
+            return Db.Categories.Where(x => x.Name == name).FirstOrDefault();
         }
     }
 }

@@ -13,6 +13,9 @@ namespace Rohham.Web.Site.Models
             this.Articles = new List<Article>();
             this.Categories = new List<Category>();
         }
+        public string Title { get; set; }
+        public string Keywords { get; set; }
+        public string Description { get; set; }
         public List<Article> Articles { get; set; }
         public List<Category> Categories { get; set; }
     }

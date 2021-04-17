@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using AspNetCore.SEOHelper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -55,11 +56,14 @@ namespace Rohham.Web.Site
             NavbarItemVM navbarItem_HomePage = new NavbarItemVM { Id = 1, Active = true, Name = "صفحه اصلی", Link = "/" };
             List<NavbarItemVM> navbarItems1 = new List<NavbarItemVM>();
 
-            NavbarItemVM navbarItem_AboutPage = new NavbarItemVM { Id = 10, Active = true, Name = "درباره ما", Link = "About" };
+            NavbarItemVM navbarItem_AboutPage = new NavbarItemVM { Id = 10, Active = true, Name = "درباره ما", Link = "/About" };
             List<NavbarItemVM> navbarItems2 = new List<NavbarItemVM>();
 
-            NavbarItemVM navbarItem_ContactPage = new NavbarItemVM { Id = 20, Active = true, Name = "تماس", Link = "Contact" };
+            NavbarItemVM navbarItem_ContactPage = new NavbarItemVM { Id = 20, Active = true, Name = "تماس", Link = "/Contact" };
             List<NavbarItemVM> navbarItems3 = new List<NavbarItemVM>();
+
+            NavbarItemVM navbarItem_Blog = new NavbarItemVM { Id = 30, Active = true, Name = "اخبار", Link = "/Blog" };
+            List<NavbarItemVM> navbarItems4 = new List<NavbarItemVM>();
 
             //navbarItems1.Add(new NavbarItemVM { Id = 2, Active = true, Name = "صفحه اصلی1", Link = "#", ParentId = 1 });
             //navbarItems1.Add(new NavbarItemVM { Id = 3, Active = true, Name = "صفحه اصلی2", Link = "#", ParentId = 1 });
@@ -67,13 +71,14 @@ namespace Rohham.Web.Site
             //navbarItems1.Add(new NavbarItemVM { Id = 5, Active = true, Name = "4صفحه اصلی", Link = "#", ParentId = 1 });
             //navbarItem_HomePage.Childs = navbarItems1;
 
-            navbarItems2.Add(new NavbarItemVM { Id = 11, Active = true, Name = "درباره ما", Link = "About", ParentId = 10 });
-            navbarItems2.Add(new NavbarItemVM { Id = 12, Active = true, Name = "تیم ما", Link = "Team", ParentId = 10 });
+            navbarItems2.Add(new NavbarItemVM { Id = 11, Active = true, Name = "درباره ما", Link = "/About", ParentId = 10 });
+            navbarItems2.Add(new NavbarItemVM { Id = 12, Active = true, Name = "تیم ما", Link = "/Team", ParentId = 10 });
             navbarItem_AboutPage.Childs = navbarItems2;
 
             navbarItems.Add(navbarItem_HomePage);
             navbarItems.Add(navbarItem_AboutPage);
             navbarItems.Add(navbarItem_ContactPage);
+            navbarItems.Add(navbarItem_Blog);
 
             NavbarVM.NavbarItems = navbarItems;
             NavbarVM.Icon = "/img/rohham_logo.png";
@@ -144,6 +149,8 @@ namespace Rohham.Web.Site
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseXMLSitemap(env.ContentRootPath);
 
             app.UseEndpoints(endpoints =>
             {

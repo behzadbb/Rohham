@@ -25,13 +25,16 @@ namespace Rohham.Web.Site.Controllers
         public IActionResult Index()
         {
             BlogVM model = new BlogVM();
-            model.Categories = _blogService.GetCategories().ToList();
+            //model.Categories = _blogService.GetCategories().ToList();
             model.Articles = _blogService.GetArticles().ToList();
+            model.Title = "اخبار و تازه ها";
+            model.Description = "اخبار و تازه ها";
+            model.Keywords = "هوش مصنوعی";
             return View(model);
         }
 
         [Route("a/{id}")]
-        public IActionResult Article(int id, string name)
+        public IActionResult Article(int id)
         {
             var article = _blogService.GetArticle(id);
             if (article == null)
@@ -39,6 +42,24 @@ namespace Rohham.Web.Site.Controllers
                 return NotFound();
             }
             return View(article);
+        }
+
+        [Route("c/{id}")]
+        public IActionResult Category(string id)
+        {
+            BlogVM model = new BlogVM();
+            var articles = _blogService.GetArticlesByCatName(id).ToList();
+            //model.Categories = _blogService.GetCategories().ToList();
+            model.Articles = articles;
+            model.Title = articles != null ? articles[0].Category.Title : id;
+            model.Description = "اخبار و تازه ها";
+            model.Keywords = "";
+            
+            if (articles == null)
+            {
+                return NotFound();
+            }
+            return View("Index", model);
         }
 
         public IActionResult CategoryList() 

@@ -13,6 +13,7 @@ namespace Rohham.Services
         void CreateArticle(Article article);
         void CreateCategory(Category category);
         Category GetCategory(int catId);
+        IList<Article> GetArticlesByCatName(string name);
         Article GetArticle(int articleId);
         IList<Category> GetCategories();
         IList<Article> GetArticles();
@@ -54,7 +55,12 @@ namespace Rohham.Services
 
         public Category GetCategory(int catId)
         {
-            throw new NotImplementedException();
+            return _repo.GetCategory(catId);
+        }
+
+        public IList<Article> GetArticlesByCatName(string name)
+        {
+            return _repo.GetArticlesByCatName(name);
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿@model BlogVM
 @{
-    ViewData["Title"] = "بلاگ";
+    ViewData["Title"] = Model.Title;
     ViewData["Description"] = "اخبار و تازه ها";
     ViewData["KeyWords"] = "هوش مصنوعی";
     Layout = "~/Views/Shared/_LayoutBlog.cshtml";
@@ -12,7 +12,7 @@
         <div class="col-lg-4 col-md-6">
             <div class="single-news">
                 <div class="blog-img">
-                    <a href="news-details.html">
+                    <a href="/a/@article.Id">
                         <img src="~/img/blog/1.png" alt="@article.Title">
                     </a>
                     <div class="dates">
